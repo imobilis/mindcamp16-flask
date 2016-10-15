@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="small-6 columns">
+        <blockquote class="twitter-tweet" lang="es">
+            <p lang="es">{{ tweet.text }}</p> — {{ tweet.user.name}} (@{{tweet.user.screen_name}})
+            <a href="https://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id}}">{{tweet.user.created_at}}</a>
+        </blockquote>
+    </div>
+    <div class="small-6 columns">
+        <br />
+        <form method="post" action="{{ url_for('vote') }}"><input type="hidden" name="twid" value="{{ tweet.id }}"><input type="hidden" name="csrf_token" value="{{ session['csrf_token'] }}" /><input type="hidden" name="vote" value="esbueno" /><input class="success button" type="submit" value="¡Es Bueno!"></form>
+        <form method="post" action="{{ url_for('vote') }}"><input type="hidden" name="twid" value="{{ tweet.id }}"><input type="hidden" name="csrf_token" value="{{ session['csrf_token'] }}" /><input type="hidden" name="vote" value="esmalo" /><input class="alert button" type="submit" value="¡Es Malo!"></form>        
+    </div>
+</div>

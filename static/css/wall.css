@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'hlmc';
+    src: url('/static/fonts/hlmc.ttf');
+}
+@font-face {
+    font-family: 'hlmv';
+    src: url('/static/fonts/hlmv.ttf');
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: hlmc;
+    background-color: #000000;
+}
+.preloader {
+    font-size: 46px;
+    font-family: 'hlmc';
+    color: #ffffff;
+}
+#videobg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+}
+.viewport {
+    width: auto;
+    height: 95%;
+    margin: 1em 1em 1em 1em;
+}
+
+#titleBox {
+    position:absolute;
+    top: 30px;
+    left: 0px;
+    display: none;
+    width: 100%;
+    text-align:center;
+}
+
+#title {
+    color: white;
+    font-family: hlmv;
+    font-size: 46pt;
+}
+
+.frame {
+    width: auto;
+    height: 97%;
+    margin: 2em 2em 2em 2em;
+    color: #ffffff;
+    display: none;
+    background-color: rgba(0,0,0,0.35);
+}
+table, tbody, tr, td {
+    background-color: rgba(0,0,0,0) !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.tableBar {
+    width: 100% !important;
+}
+.authorCol {
+    width: 15% !important;
+}
+.barCol {
+    width: 65% !important;
+}
+.votesCol {
+    width: 20% !important;
+}
+#barFrame {
+    vertical-align: middle;
+    padding-top: 50px;
+}
+span.barra {
+    position: relative;
+    top: 4px;
+    width: 100%;
+    height: 24px;
+    display: inline-block;
+    background: #0A0C7A;
+}
+ul li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 20pt;
+    line-height: 2.67em;
+    opacity: 1.0;
+}

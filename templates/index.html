@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block title %}¿Es Bueno?{% endblock %}
+{% block body %}
+<div class="row">
+    <div class="small-12 columns">
+    {% for status in tweets %}
+        {% with tweet=status %}
+        {% include 'partial_tweet.html' %}
+        {% endwith %}
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
